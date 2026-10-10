@@ -1,78 +1,115 @@
-## 1. Propósito
+# 📊 Medición y Evaluación de Mejoras
 
-Establecer criterios para medir los resultados de las pruebas y determinar si una propuesta produce una mejora real en el proceso.
+> 🎯 Herramientas para interpretar datos, comparar resultados y determinar si una mejora aporta valor al proceso.
 
-La evaluación debe basarse en datos observables y comparables, evitando conclusiones basadas únicamente en impresiones personales.
+## 🎯 1. Propósito
 
-## 2. Situación inicial
+Establecer criterios y herramientas para analizar los resultados obtenidos durante las pruebas de mejora.
 
-Antes de implementar una mejora, se deberá registrar cómo funciona actualmente el proceso.
+Este documento se centra en **cómo interpretar los datos y determinar qué significan para el proceso**, complementando la metodología general y el registro de experimentos.
 
-Se buscará identificar:
+## 📏 2. Selección de indicadores
 
-- **Tiempo de ciclo:** tiempo necesario para completar una operación o unidad de trabajo.
-- **Tiempo de espera:** tiempo durante el cual una operación o persona espera para continuar.
-- **Cantidad producida:** unidades completadas durante un período determinado.
-- **Errores:** fallas, defectos o retrabajos detectados.
-- **Acumulación:** cantidad de unidades que esperan entre etapas.
-- **Condiciones de trabajo:** recursos, materiales, espacio y condiciones relevantes.
+Cada problema requiere indicadores específicos. No es necesario medir todo: se deben seleccionar las variables que permitan evaluar el objetivo de la mejora.
 
-No todos los indicadores serán necesarios en cada experimento. Se seleccionarán los que permitan evaluar el problema específico.
+| Indicador | ¿Qué permite analizar? |
+|---|---|
+| ⏱️ Tiempo de ciclo | Duración de una operación o unidad de trabajo. |
+| ⏳ Tiempo de espera | Tiempo durante el cual una actividad queda detenida esperando otra. |
+| 📦 Producción | Cantidad de unidades completadas en un período. |
+| ✅ Calidad | Errores, defectos y retrabajos detectados. |
+| 🔄 Acumulación | Unidades o tareas pendientes entre etapas. |
+| 🦺 Condiciones de trabajo | Ergonomía, seguridad, disponibilidad de recursos y dificultades operativas. |
 
-## 3. Medición posterior
+La selección dependerá del problema estudiado y de la información que sea posible obtener.
 
-Después de aplicar una modificación, se volverán a medir los indicadores seleccionados.
+## 🧮 3. Herramientas de análisis
 
-Siempre que sea posible, se mantendrán condiciones comparables entre la situación inicial y la prueba.
+### ⏱️ Variación del tiempo
 
-También se registrarán los cambios que puedan afectar los resultados, como diferencias en el volumen de trabajo, disponibilidad de materiales o personal.
+Permite calcular cuánto cambió el tiempo de una operación después de una modificación.
 
-## 4. Comparación de resultados
+\[
+\text{Variación} = \text{Tiempo final} - \text{Tiempo inicial}
+\]
 
-Los datos se organizarán en una comparación entre el antes y el después.
+Un resultado negativo indica una reducción del tiempo; uno positivo, un aumento.
 
-| Indicador | Antes | Después | Diferencia |
-|---|---|---|---|
-| Tiempo de ciclo | Pendiente | Pendiente | Pendiente |
-| Tiempo de espera | Pendiente | Pendiente | Pendiente |
-| Cantidad producida | Pendiente | Pendiente | Pendiente |
-| Errores o defectos | Pendiente | Pendiente | Pendiente |
+### 📉 Porcentaje de reducción
 
-Los valores se completarán cuando se realicen las mediciones. No se inventarán resultados ni se considerará validada una propuesta sin evidencia suficiente.
+Cuando el tiempo inicial es mayor que cero, se puede calcular la reducción porcentual:
 
-## 5. Evaluación de la mejora
+\[
+\text{Reducción (\%)} =
+\frac{\text{Tiempo inicial}-\text{Tiempo final}}
+{\text{Tiempo inicial}}\times100
+\]
 
-La propuesta se evaluará considerando:
+**Ejemplo hipotético:** si una operación pasa de 60 segundos a 48 segundos, la reducción es del 20 %.
 
-- **Efectividad:** si mejoró el indicador relacionado con el problema.
-- **Calidad:** si mantuvo o mejoró la calidad del resultado.
-- **Seguridad:** si evitó introducir nuevos riesgos.
-- **Impacto en otras etapas:** si trasladó el problema a otro punto del proceso.
-- **Viabilidad:** si puede mantenerse con los recursos disponibles.
+Este ejemplo es ilustrativo y no representa una medición de los casos del portfolio.
 
-Una reducción del tiempo de una operación no necesariamente representa una mejora global si provoca acumulaciones, errores o sobrecarga en otra etapa.
+### 📦 Variación de la producción
 
-## 6. Criterios de decisión
+Permite comparar la cantidad producida durante períodos equivalentes:
 
-Al finalizar la evaluación, se podrá decidir:
+\[
+\text{Variación de producción} =
+\text{Producción final} - \text{Producción inicial}
+\]
 
-- **Aceptar la mejora:** cuando la evidencia sea suficiente y los resultados sean favorables.
-- **Realizar una nueva prueba:** cuando los resultados sean inconclusos o se necesiten más datos.
-- **Modificar la propuesta:** cuando se identifiquen oportunidades de ajuste.
-- **Descartar la propuesta:** cuando no produzca el resultado esperado o genere efectos negativos relevantes.
+La comparación solo será útil si se consideran las diferencias relevantes entre los períodos, como la duración de la jornada, el volumen de trabajo y la disponibilidad de materiales.
 
-## 7. Registro de conclusiones
+## 🔍 4. Interpretación de resultados
 
-Cada evaluación deberá incluir:
+Los datos deben interpretarse dentro del contexto del proceso.
 
-- Problema analizado.
-- Modificación probada.
-- Datos obtenidos.
-- Comparación entre la situación inicial y la posterior.
-- Limitaciones de la prueba.
-- Decisión tomada.
-- Próximos pasos.
+Una reducción del tiempo puede ser favorable, pero no demuestra por sí sola que el proceso haya mejorado.
 
-## 8. Principio de trabajo
+También se deberá analizar:
 
-**Una mejora no se considera comprobada por haber sido propuesta o implementada. Debe evaluarse mediante resultados observables, teniendo en cuenta sus efectos sobre el proceso completo.**
+- ✅ Si la calidad se mantiene o mejora.
+- 🦺 Si las condiciones de seguridad siguen siendo adecuadas.
+- 🔗 Si aparecen demoras o acumulaciones en otras etapas.
+- 👥 Si la distribución del trabajo resulta viable.
+- 💰 Si los recursos necesarios justifican la mejora.
+- 📊 Si los resultados son consistentes o podrían deberse a condiciones particulares.
+
+Cuando existan pocas observaciones o condiciones diferentes entre las pruebas, las conclusiones deberán presentarse con cautela.
+
+## ⚠️ 5. Limitaciones de la medición
+
+Toda evaluación tiene limitaciones que pueden afectar la interpretación de los resultados.
+
+Entre ellas se encuentran:
+
+- Datos incompletos o poco precisos.
+- Diferencias entre las condiciones iniciales y finales.
+- Cantidad insuficiente de observaciones.
+- Cambios simultáneos que dificultan identificar la causa del resultado.
+- Indicadores que no reflejan todos los efectos de una modificación.
+
+Estas limitaciones deberán documentarse para evitar conclusiones más firmes de lo que permite la evidencia.
+
+## 🧠 6. De los datos a la decisión
+
+Los resultados de una evaluación pueden dar lugar a distintas conclusiones:
+
+- 🟢 **Resultado favorable:** los datos respaldan la mejora y no se identifican efectos negativos relevantes.
+- 🟡 **Resultado parcial:** existe una mejora en algún aspecto, pero quedan cuestiones por resolver.
+- 🔵 **Resultado inconcluso:** la información disponible no permite determinar si la propuesta funciona.
+- 🔴 **Resultado desfavorable:** la propuesta no alcanza el objetivo o genera consecuencias negativas relevantes.
+
+La decisión final deberá considerar el conjunto del proceso, los criterios definidos antes de la prueba y las limitaciones de los datos.
+
+## 🗂️ 7. Aplicación en los casos de estudio
+
+Estas herramientas podrán utilizarse cuando existan datos suficientes para evaluar las propuestas de los casos documentados.
+
+Por ejemplo, en el caso de preparación y montaje, podrían analizarse las interrupciones, los tiempos de preparación y montaje, las tareas pendientes y los posibles efectos sobre otras etapas.
+
+Si no se dispone de mediciones, el caso podrá mantenerse como análisis cualitativo y propuesta pendiente de validación. No deberán inventarse valores para completar las tablas.
+
+---
+
+**🔑 Principio fundamental:** medir permite conocer qué cambió; analizar permite comprender qué significa ese cambio para el proceso.
